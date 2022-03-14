@@ -66,7 +66,7 @@ def create_Labels(l_text, r, c, cs, st, f_size=2, py=3):
 
 if __name__ == '__main__':
     label_german = str(pathlib.Path().absolute()) + '/qr-ezs-app/.labels_de.txt'
-    label_english = str(pathlib.Path().absolute()) + '/wr-ezs-app/.labels_en.txt'
+    label_english = str(pathlib.Path().absolute()) + '/qr-ezs-app/.labels_en.txt'
     bill_path = str(pathlib.Path().absolute())
 
     mainwindow = tk.Tk()
