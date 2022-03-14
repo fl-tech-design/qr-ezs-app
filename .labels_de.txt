@@ -9,6 +9,7 @@
 'lab_man': 'Bitte füllen Sie alle Felder aus. '
            'Das Referenzfeld kann leer bleiben.',
 'lab_cur': 'Währung:',
+'lab_lan': 'Sprache:',
 'lab_fin': 'Fertig',
 'lan_ger': 'Deutsch',
 'lan_eng': 'Englisch'

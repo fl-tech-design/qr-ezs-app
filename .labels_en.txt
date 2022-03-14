@@ -9,6 +9,7 @@
 'lab_man': 'Please fill in all fields. '
            'The reference field can remain empty.',
 'lab_cur': 'Currency:',
+'lab_lan': 'Language:',
 'lab_fin': 'Finish',
 'lan_ger': 'German',
 'lan_eng': 'English'
