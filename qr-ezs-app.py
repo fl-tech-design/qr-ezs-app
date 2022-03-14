@@ -66,7 +66,7 @@ def create_Labels(l_text, r, c, cs, st, f_size=2, py=3):
 
 if __name__ == '__main__':
     label_german = str(pathlib.Path().absolute()) + '/qr-ezs-app/.labels_de.txt'
-    label_english = str(pathlib.Path().absolute()) + '/wr-ezs-app/.labels_en.txt'
+    label_english = str(pathlib.Path().absolute()) + '/qr-ezs-app/.labels_en.txt'
     bill_path = str(pathlib.Path().absolute())
 
     mainwindow = tk.Tk()
@@ -144,8 +144,6 @@ if __name__ == '__main__':
     tk.Radiobutton(mainwindow, text=get_data('lan_eng'), indicatoron=0, width=10,
                    variable=lang_path, value='en', selectcolor='green',
                    command=lambda: lang_path.set(label_english)).grid(row=8, column=4, sticky='w')
-
-
 
     tk.Button(mainwindow, text=get_data('lab_fin'), font=('Calibri', 16), width=50, command=exportBill, bd=2).grid(
         row=10, column=0,
