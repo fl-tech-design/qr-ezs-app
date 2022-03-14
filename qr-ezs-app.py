@@ -124,7 +124,7 @@ if __name__ == '__main__':
     a_entry.grid(row=2, column=3, rowspan=3, columnspan=2)
 
     a_plz = tk.Entry(mainwindow, width=30, bd=1)
-    a_plz.grid(row=5, column=3, columnspan=2, padx=15)
+    a_plz.grid(row=5, column=3, columnspan=2, padx=10)
 
     a_ort = tk.Entry(mainwindow, width=30, bd=1)
     a_ort.grid(row=6, column=3, columnspan=2)
