@@ -1,0 +1,15 @@
+{'lab_plz': 'Postal code:',
+'lab_emp': 'Receiver:   ',
+'lab_ort': 'Village:   ',
+'lab_iba': 'IBAN:        ',
+'lab_bet': 'Amount:      ',
+'lab_ref': 'Reference:    ',
+'lab_abs': 'Sender:    ',
+'lab_tit': 'QR-invoice for IBAN Account numbers',
+'lab_man': 'Please fill in all fields. '
+           'The reference field can remain empty.',
+'lab_cur': 'Currency:',
+'lab_fin': 'Finish',
+'lan_ger': 'German',
+'lan_eng': 'English'
+}
