@@ -42,7 +42,7 @@ def exportBill():
             'city': a_ort.get()
         },
     )
-    my_bill.as_svg(bill_path + '-bill.svg')
+    my_bill.as_svg(bill_path + '/bill.svg')
     list_entrys = [e_plz, e_ort, iban, reference, betrag, a_plz, a_ort, e_entry, a_entry]
     for index in range(len(list_entrys) - 2):
         list_entrys[index].delete(0, 'end')
