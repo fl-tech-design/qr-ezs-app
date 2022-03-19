@@ -63,20 +63,22 @@ def create_Labels(l_text, r, c, cs, st, f_size=2, py=3):
 
 
 if __name__ == '__main__':
+    # file and program path's
     label_german = str(pathlib.Path().absolute()) + '/qr-ezs-app/.labels_de.txt'
     label_english = str(pathlib.Path().absolute()) + '/qr-ezs-app/.labels_en.txt'
     bill_path = str(pathlib.Path().absolute())
 
+    # create the window
     mainwindow = tk.Tk()
-    mainwindow.title('QR Einzahlungschein')
+    mainwindow.title('QR Einzahlungsschein')
     mainwindow.resizable(width=False, height=False)
 
-    # Variabeln
+    # variables
     lang_path = tk.StringVar(value=label_german)
     currency = tk.StringVar()
     language = tk.StringVar()
 
-    # Titel
+    # titel
     create_Labels(get_data('lab_tit'), 0, 0, 3, 'w', 1, 15)
     create_Labels(get_data('lab_man'), 1, 0, 4, 'w', 10)
 
@@ -109,10 +111,10 @@ if __name__ == '__main__':
     reference = tk.Entry(mainwindow, width=30, bd=1)
     reference.grid(row=9, column=1)
 
-    # Absender
-    # Absendertextfeld für Name und Adresse und PLZ
+    # Sender
+    # lists with sender labels, which are stored in a dictionary in the language file
     lab_abs_list = [get_data('lab_abs'), '', '', get_data('lab_plz'),
-                    get_data('lab_ort'), get_data('lab_cur'), get_data('lab_lan')]
+                    get_data('lab_ort'), get_data('lab_cur')]
 
     for i in range(len(lab_abs_list)):
         if i == 0:
@@ -120,6 +122,7 @@ if __name__ == '__main__':
         else:
             create_Labels(lab_abs_list[i], i + 2, 2, 1, 'ww')
 
+    # sendertextfield for name and adress
     a_entry = tk.Text(mainwindow, width=30, height=3, bd=1)
     a_entry.grid(row=2, column=3, rowspan=3, columnspan=2)
 
@@ -129,18 +132,13 @@ if __name__ == '__main__':
     a_ort = tk.Entry(mainwindow, width=30, bd=1)
     a_ort.grid(row=6, column=3, columnspan=2)
 
-    tk.Radiobutton(mainwindow, text='CHF', indicatoron=0, width=10,
-                   variable=currency, value='CHF', selectcolor='green',
+    tk.Radiobutton(mainwindow, text='CHF', indicatoron=False, width=10,
+                   variable=currency, value='CHF', selectcolor='lightgreen',
                    command=lambda: currency.set('CHF')).grid(row=7, column=3, sticky='e')
-    tk.Radiobutton(mainwindow, text='EUR', indicatoron=0, width=10,
-                   variable=currency, value='EUR', selectcolor='green',
+    tk.Radiobutton(mainwindow, text='EUR', indicatoron=False, width=10,
+                   variable=currency, value='EUR', selectcolor='lightgreen',
                    command=lambda: currency.set('EUR')).grid(row=7, column=4, sticky='w')
-    tk.Radiobutton(mainwindow, text=get_data('lan_ger'), indicatoron=0, width=10,
-                   variable=lang_path, value='de', selectcolor='green',
-                   command=lambda: lang_path.set(label_german)).grid(row=8, column=3, sticky='e')
-    tk.Radiobutton(mainwindow, text=get_data('lan_eng'), indicatoron=0, width=10,
-                   variable=lang_path, value='en', selectcolor='green',
-                   command=lambda: lang_path.set(label_english)).grid(row=8, column=4, sticky='w')
+
 
     tk.Button(mainwindow, text=get_data('lab_fin'), font=('Calibri', 16), width=50, command=exportBill, bd=2).grid(
         row=10, column=0,
