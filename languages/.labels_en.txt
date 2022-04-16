@@ -12,5 +12,7 @@
 'lab_lan': 'Language:',
 'lab_fin': 'Finish',
 'lan_ger': 'German',
-'lan_eng': 'English'
+'lan_eng': 'English',
+'lab_fav': 'Favourites:',
+'lab_clear': 'clear'
 }

@@ -12,5 +12,7 @@
 'lab_lan': 'Sprache:',
 'lab_fin': 'Fertig',
 'lan_ger': 'Deutsch',
-'lan_eng': 'Englisch'
+'lan_eng': 'Englisch',
+'lab_fav': 'Favoriten:',
+'lab_clear': 'löschen'
 }
